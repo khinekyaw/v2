@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import { BeakerIcon } from '@heroicons/react/24/solid'
 
 import { cn } from '@/lib/utils'
 
@@ -13,7 +14,9 @@ export default function Home() {
     <main className={cn(inter.className, 'p-10 bg-woodsmoke-50 min-h-screen')}>
       <Box>
         <Title />
-        <Button>Hire Me</Button>
+        <Button startContent={<BeakerIcon className="w-4" />}>
+          Hire Me Yes Button
+        </Button>
       </Box>
     </main>
   )
