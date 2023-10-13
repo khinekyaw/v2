@@ -1,0 +1,4 @@
+{
+  "prettier.singleQuote": true,
+  "tailwindCSS.experimental.classRegex": ["cn\\('([^']*)'\\)"]
+}
