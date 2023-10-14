@@ -9,6 +9,7 @@ import Button from '@/components/atoms/Button'
 import Heading from '@/components/atoms/Heading'
 import Paragraph from '@/components/atoms/Paragraph'
 import Badge from '@/components/atoms/Badge'
+import BoxedImage from '@/components/patterns/BoxedImage'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +18,10 @@ export default function Home() {
     <main
       className={cn(
         inter.className,
-        'p-10 bg-athens-gray-100 min-h-screen space-y-2'
+        'p-10 bg-athens-gray-100 min-h-screen space-y-2 text-woodsmoke-800'
       )}
     >
+      <Heading>Atoms</Heading>
       <Box>
         <h1>Heading</h1>
         <Heading>I'm Khine Kyaw Tun</Heading>
@@ -27,6 +29,7 @@ export default function Home() {
       <Box>
         <h1>Title</h1>
         <Title>Fullstack Developer</Title>
+        <Title disableDot>Without Dot</Title>
       </Box>
       <Box>
         <h1>Paragraph</h1>
@@ -46,6 +49,25 @@ export default function Home() {
           <Button startContent={<BeakerIcon className="w-4" />}>
             Copy Email
           </Button>
+        </div>
+      </Box>
+      <Heading>Patterns</Heading>
+      <Box>
+        <h1>Boxed Image</h1>
+        <div className="flex gap-3">
+          <BoxedImage
+            src={'/vercel.webp'}
+            alt=""
+            sizes="(min-width: 780px) 110px, 46px"
+            className="w-16 md:w-20 aspect-square"
+          />
+          <BoxedImage
+            borderRadius="full"
+            src={'/vercel.webp'}
+            alt=""
+            sizes="(min-width: 780px) 110px, 46px"
+            className="w-16 md:w-20 aspect-square"
+          />
         </div>
       </Box>
     </main>

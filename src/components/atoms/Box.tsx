@@ -3,13 +3,23 @@ import React, { FC, ComponentPropsWithRef, forwardRef } from 'react'
 import * as styles from '@/lib/styles'
 import { cn } from '@/lib/utils'
 
-const Box: FC<ComponentPropsWithRef<'div'>> = forwardRef(
-  ({ children, ...props }, ref) => {
+export type BoxProps = {
+  borderRadius?: 'sm' | 'md' | 'lg' | 'full'
+} & ComponentPropsWithRef<'div'>
+
+const Box: FC<BoxProps> = forwardRef(
+  ({ children, borderRadius, className, ...props }, ref) => {
     return (
       <div
         ref={ref}
         {...props}
-        className={cn(styles.box, 'p-5 rounded-2xl', props.className)}
+        className={cn(
+          styles.box,
+          'p-5 rounded-xl',
+          borderRadius === 'lg' && 'rounded-2xl',
+          borderRadius === 'full' && 'rounded-full',
+          className
+        )}
       >
         {children}
       </div>

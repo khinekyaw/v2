@@ -4,6 +4,6 @@
 import { cn } from './utils'
 
 export const box = cn(
-  'bg-white text-woodsmoke-800 shadow shadow-woodsmoke-100',
+  'bg-white shadow shadow-woodsmoke-100',
   'border border-woodsmoke-100'
 )
