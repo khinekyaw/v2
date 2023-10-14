@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import Title from '@/components/atoms/Title'
 import Box from '@/components/atoms/Box'
 import Button from '@/components/atoms/Button'
+import Heading from '@/components/atoms/Heading'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,12 +15,16 @@ export default function Home() {
     <main
       className={cn(
         inter.className,
-        'p-10 bg-woodsmoke-50 min-h-screen space-y-2'
+        'p-10 bg-athens-gray-100 min-h-screen space-y-2'
       )}
     >
       <Box>
+        <h1>Heading</h1>
+        <Heading>I'm Khine Kyaw Tun</Heading>
+      </Box>
+      <Box>
         <h1>Title</h1>
-        <Title />
+        <Title>Fullstack Developer</Title>
       </Box>
       <Box>
         <h1>Button</h1>

@@ -1,5 +1,6 @@
-// need to reconfigure tailwind config,
-// in a case moving or renaming this file.
+// in a case of moving or renaming this file
+// need to reconfigure tailwind config
+
 import { cn } from './utils'
 
 export const box = cn(

@@ -30,4 +30,6 @@ const Button: FC<ComponentPropsWithRef<'button'> & ButtonProps> = forwardRef(
   }
 )
 
+Button.displayName = 'Button'
+
 export default Button

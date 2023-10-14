@@ -14,4 +14,6 @@ const Box: FC<ComponentPropsWithRef<'div'>> = forwardRef((props, ref) => {
   )
 })
 
+Box.displayName = 'Box'
+
 export default Box
