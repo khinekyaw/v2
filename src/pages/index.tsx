@@ -23,6 +23,10 @@ export default function Home() {
     >
       <Heading>Atoms</Heading>
       <Box>
+        <h1>Box</h1>
+        <Box variant="flat">Flat Box</Box>
+      </Box>
+      <Box>
         <h1>Heading</h1>
         <Heading>I'm Khine Kyaw Tun</Heading>
       </Box>

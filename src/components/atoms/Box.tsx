@@ -5,10 +5,11 @@ import { cn } from '@/lib/utils'
 
 export type BoxProps = {
   borderRadius?: 'sm' | 'md' | 'lg' | 'full'
+  variant?: 'default' | 'flat'
 } & ComponentPropsWithRef<'div'>
 
 const Box: FC<BoxProps> = forwardRef(
-  ({ children, borderRadius, className, ...props }, ref) => {
+  ({ children, borderRadius, variant, className, ...props }, ref) => {
     return (
       <div
         ref={ref}
@@ -18,6 +19,7 @@ const Box: FC<BoxProps> = forwardRef(
           'p-5 rounded-xl',
           borderRadius === 'lg' && 'rounded-2xl',
           borderRadius === 'full' && 'rounded-full',
+          variant === 'flat' && 'shadow-none border-none bg-athens-gray-50',
           className
         )}
       >
