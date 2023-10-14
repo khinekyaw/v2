@@ -10,21 +10,32 @@ interface ButtonProps {
 }
 
 const Button: FC<ComponentPropsWithRef<'button'> & ButtonProps> = forwardRef(
-  ({ color = 'white', ...props }, ref) => {
+  (
+    {
+      color = 'white',
+      children,
+      className,
+      startContent,
+      endContent,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <button
         ref={ref}
+        {...props}
         className={cn(
           styles.box,
           'flex basis-auto items-center whitespace-nowrap',
-          'px-2 py-2 gap-2 text-sm font-bold rounded-md',
+          'px-3 py-2 gap-2 text-sm font-bold rounded-md',
           color === 'black' && 'bg-woodsmoke-950 text-white',
-          props.className
+          className
         )}
       >
-        {props.startContent}
-        {props.children}
-        {props.endContent}
+        {startContent}
+        {children}
+        {endContent}
       </button>
     )
   }

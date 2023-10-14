@@ -14,8 +14,8 @@ const Heading: FC<ComponentPropsWithRef<heading> & HeadingProps> = forwardRef(
     return (
       <Component
         ref={ref}
-        className={cn('text-4xl font-bold', className)}
         {...props}
+        className={cn('text-4xl font-bold', className)}
       >
         {children}
       </Component>
