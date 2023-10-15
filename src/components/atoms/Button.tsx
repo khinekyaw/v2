@@ -7,6 +7,7 @@ interface ButtonProps {
   startContent?: ReactNode
   endContent?: ReactNode
   color?: 'white' | 'black'
+  borderRadius?: 'default' | 'full'
 }
 
 const Button: FC<ComponentPropsWithRef<'button'> & ButtonProps> = forwardRef(
@@ -17,6 +18,7 @@ const Button: FC<ComponentPropsWithRef<'button'> & ButtonProps> = forwardRef(
       className,
       startContent,
       endContent,
+      borderRadius = 'default',
       ...props
     },
     ref
@@ -30,6 +32,7 @@ const Button: FC<ComponentPropsWithRef<'button'> & ButtonProps> = forwardRef(
           'flex basis-auto items-center whitespace-nowrap',
           'px-3 py-2 gap-2 text-sm font-bold rounded-md',
           color === 'black' && 'bg-woodsmoke-950 text-white',
+          borderRadius === 'full' && 'rounded-full px-2',
           className
         )}
       >

@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
-import { BeakerIcon } from '@heroicons/react/24/solid'
+import { RiLinkedinFill } from 'react-icons/ri'
+import { LuCopy } from 'react-icons/lu'
+import { BsStars } from 'react-icons/bs'
 
 import { cn } from '@/lib/utils'
 
@@ -41,16 +43,19 @@ export default function Home() {
       </Box>
       <Box>
         <h1>Badge</h1>
-        <Badge>Default Badge</Badge>
+        <Badge className="mr-3">Default Badge</Badge>
         <Badge color="success">• AVAILABLE FOR WORK</Badge>
       </Box>
       <Box>
         <h1>Button</h1>
         <div className="flex gap-4">
-          <Button color="black" startContent={<BeakerIcon className="w-4" />}>
+          <Button
+            color="black"
+            startContent={<BsStars className="text-base" />}
+          >
             Hire Me
           </Button>
-          <Button startContent={<BeakerIcon className="w-4" />}>
+          <Button startContent={<LuCopy className="text-base" />}>
             Copy Email
           </Button>
         </div>
@@ -60,19 +65,27 @@ export default function Home() {
         <h1>Boxed Image</h1>
         <div className="flex gap-3">
           <BoxedImage
-            src={'/vercel.webp'}
-            alt=""
-            sizes="(min-width: 780px) 110px, 46px"
-            className="w-16 md:w-20 aspect-square"
-          />
-          <BoxedImage
             borderRadius="full"
             src={'/vercel.webp'}
             alt=""
             sizes="(min-width: 780px) 110px, 46px"
-            className="w-16 md:w-20 aspect-square"
+            className="w-16 h-16 md:w-20 md:h-20"
+          />
+          <BoxedImage
+            src={'/vercel.webp'}
+            alt=""
+            sizes="(min-width: 780px) 110px, 46px"
+            className="w-20 md:w-24 md:h-24"
           />
         </div>
+      </Box>
+      <Box>
+        <h1>Icon Link</h1>
+        <Button
+          borderRadius="full"
+          startContent={<RiLinkedinFill className="text-2xl" />}
+          className="p-2"
+        />
       </Box>
     </main>
   )
