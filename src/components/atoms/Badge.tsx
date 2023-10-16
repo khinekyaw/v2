@@ -19,7 +19,7 @@ const Badge = ({
         'px-2 py-1',
         'rounded-s-full rounded-e-full bg-woodsmoke-100',
         'text-sm font-medium',
-        color === 'success' && 'bg-green-100 text-green-600',
+        color === 'success' && 'bg-emerald-100 text-emerald-600',
         className
       )}
     >
