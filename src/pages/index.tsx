@@ -32,7 +32,7 @@ export default function Home() {
         </Box>
         <Box>
           <h1>Heading</h1>
-          <Heading>I'm Khine Kyaw Tun</Heading>
+          <Heading>Im Khine Kyaw Tun</Heading>
         </Box>
         <Box>
           <h1>Title</h1>
